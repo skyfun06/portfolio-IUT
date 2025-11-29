@@ -21,6 +21,7 @@ body {
 
 header {
     width: 100%;
+    max-height: 58px;
 
     display: flex;
     flex-direction: row;
@@ -28,6 +29,14 @@ header {
     align-items: center;
 
     padding: 32px;
+    
+    background-color: #f6f4fbad;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
 }
 
 #title-header {
@@ -57,11 +66,53 @@ header {
 
 .link {
     color: #707c8e;
-    font-weight: 500;
-
+    font-size: 14px;
+    
+    cursor: pointer;
     transition: all 0.2s ease;
 }
 
 .link:hover {
     color: #000;
+}
+
+.theme-switch {
+    width: 64px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    
+    background: radial-gradient(
+        circle at 70% 20%,
+        rgba(255, 255, 255, 0.4),
+        rgba(220, 220, 255, 0.2),
+        rgba(180, 200, 255, 0.15),
+        rgba(150, 170, 255, 0.1)
+        ),
+        linear-gradient(
+        135deg,
+        #f3e7ff,
+        #ddeaff,
+        #d4f1e6
+        );
+    background-size: cover;
+    padding: 4px;
+
+    border-radius: 9999px;
+
+    position: relative;
+    cursor: pointer;
+}
+
+.thumb {
+    width: 22px;
+    height: 22px;
+}
+
+#accueil {
+    padding-top: 64px;
+}
+
+#typewriter {
 }
