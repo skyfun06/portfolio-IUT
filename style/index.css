@@ -169,7 +169,7 @@ header {
     align-items: flex-start;
 
     padding-top: 64px;
-    padding: 164px 52px;
+    padding: 100px 52px;
 }
 
 #hero-accueil {
@@ -180,7 +180,260 @@ header {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 32px;
+
+    padding-top: 100px;
+}
+
+#tag {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    
+    color: #8891a1;
+    font-size: 14px;
+    font-weight: 500;
+
+    background-color: #f6f5fb;
+
+    padding: 8px 16px;
+
+    border-radius: 9999px;
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+#tag > svg {
+    color: #59c09f;
 }
 
 #typewriter {
+    font-size: 42px;
+    font-weight: 700;   
+
+    border-right: solid 3px #925cf0;
+}
+
+.gradient-text {
+    background: #8A62E8;
+    background: linear-gradient(90deg,rgba(138, 98, 232, 1) 0%, rgba(54, 174, 140, 1) 100%);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+    color: transparent;
+}
+
+#description {
+    max-width: 672px;
+
+    color: #637083;
+    font-size: 18px;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+}
+
+.buttons-accueil {
+    font-size: 18px;
+    font-weight: 600;
+
+    padding: 12px 40px; 
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+#explore-projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    color: #fff;
+
+    background: #8A62E8;
+    background: linear-gradient(90deg,rgba(138, 98, 232, 1) 0%, rgba(54, 174, 140, 1) 100%);
+}
+
+#explore-projects:hover {
+    transform: scale(1.05);
+    box-shadow: #925cf07d 0px 3px 8px;
+}
+
+#contact-me {
+    border: 1px solid #dbdde3;
+
+    background-color: #fff;
+}
+
+#contact-me:hover {
+    transform: scale(1.08);
+    border-color: #925cf07d;
+}
+
+#div-infos {
+    max-width: 380px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+
+    background-color: #f4f8f9;
+
+    border-radius: 12px;
+
+    padding: 22px;
+
+    margin-top: 24px;
+}
+
+#div-infos > h2 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+#cards {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.card {
+    width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+
+    background-color: #f9fcfb;
+
+    padding: 16px;
+}
+
+.logo-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background: radial-gradient(
+        circle at 70% 20%,
+        rgba(255, 255, 255, 0.4),
+        rgba(220, 220, 255, 0.2),
+        rgba(180, 200, 255, 0.15),
+        rgba(150, 170, 255, 0.1)
+        ),
+        linear-gradient(
+        135deg,
+        #f3e7ff,
+        #ddeaff,
+        #d4f1e6
+        );
+    background-size: cover;
+
+    padding: 12px;
+
+    border-radius: 12px;
+}
+
+.purple {
+    color: #925cf0;
+}
+
+.green {
+    color: #59c09f;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.card-info > p:first-child {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.card-info > p:last-child {
+    color: #637083;
+    font-size: 14px;
+}
+
+#div-infos > hr {
+    width: 100%;
+    height: 1px;
+
+    background-color: #dcdfe5;
+}
+
+#mastered-language {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+#mastered-language > p {
+    color: #637083;
+    font-size: 14px;
+}
+
+#language {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+#language > p {
+    font-size: 12px;
+
+    padding: 4px 12px;
+
+    background: radial-gradient(
+        circle at 70% 20%,
+        rgba(255, 255, 255, 0.4),
+        rgba(220, 220, 255, 0.2),
+        rgba(180, 200, 255, 0.15),
+        rgba(150, 170, 255, 0.1)
+        ),
+        linear-gradient(
+        135deg,
+        #f3e7ff,
+        #ddeaff,
+        #d4f1e6
+        );
+    background-size: cover;
+
+    border-radius: 9999px;
 }

@@ -9,7 +9,6 @@ const element = document.getElementById("typewriter");
 
 const themeSwitch = document.getElementById("theme-switch");
 
-
 let phraseIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
