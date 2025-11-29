@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background: radial-gradient(
+        circle at 70% 20%,
+        rgba(255, 255, 255, 0.4),
+        rgba(220, 220, 255, 0.2),
+        rgba(180, 200, 255, 0.15),
+        rgba(150, 170, 255, 0.1)
+        ),
+        linear-gradient(
+        135deg,
+        #f3e7ff,
+        #ddeaff,
+        #d4f1e6
+        );
+    background-size: cover;
+}
+
+header {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 32px;
+}
+
+#title-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+#title-header > svg {
+    color: #925cf0;
+}
+
+#title-header > p {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.link {
+    color: #707c8e;
+    font-weight: 500;
+
+    transition: all 0.2s ease;
+}
+
+.link:hover {
+    color: #000;
+}
