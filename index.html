@@ -17,11 +17,11 @@
             Portfolio
         </a>
         <div id="links">
-            <a href="#" class="link">Accueil</a>
-            <a href="#" class="link">Projets</a>
-            <a href="#" class="link">Parcours</a>
-            <a href="#" class="link">Motivation</a>
-            <a href="#" class="link">Contact</a>
+            <a href="#accueil" class="link">Accueil</a>
+            <a href="#projects-section" class="link">Projets</a>
+            <a href="#timeline-section" class="link">Parcours</a>
+            <a href="#motivation-section" class="link">Motivation</a>
+            <a href="#contact" class="link">Contact</a>
             <div class="theme-switch" id="theme-switch">
                 <div class="thumb">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
@@ -42,11 +42,11 @@
                 Prêt à transformer mes idées en solutions numériques concrètes.
             </p>
             <div id="buttons">
-                <button id="explore-projects" class="buttons-accueil">
+                <a href="#projects-sections" id="explore-projects" class="buttons-accueil">
                     Explorer mes projets
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down-icon lucide-arrow-down"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>               
-                </button>
-                <button id="contact-me" class="buttons-accueil">Me contacter</button>
+                </a>
+                <a href="#contact" id="contact-me-button" class="buttons-accueil">Me contacter</a>
             </div>
         </div>
         <div id="div-infos">
@@ -159,7 +159,7 @@
     </section>
     <section id="timeline-section">
         <div class="top-section" id="top-timeline-section">
-            <p>Mon Parcours</p>
+            <p class="top-tag-green">Mon Parcours</p>
             <h2>Skills <span class="gradient-text">Journey</span></h2>
             <p>
                 Une timeline de mon évolution en programmation,
@@ -290,5 +290,73 @@
             </p>
         </div>
     </section>
+    <section id="contact">
+        <div class="top-section">
+            <p class="top-tag-green">Contact</p>
+            <h2>Restons en <span class="gradient-text">Contact</span></h2>
+            <p>Intéressé par mon profil ? N'hésitez pas à me contacter pour discuter de mes projets ou de mon parcours.</p>
+        </div>
+        <div id="contact-me">
+            <form>
+                <h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+                    Envoyez-moi un message 
+                </h3>
+                <div>
+                    <label>Nom complet</label>
+                    <input type="text" name="name" id="name" placeholder="Votre nom" >
+                </div>
+                <div>
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="votre@email.com">
+                </div>
+                <div>
+                    <label>Message</label>
+                    <textarea name="message" id="message" placeholder="votre message..." rows="4"></textarea>
+                </div>
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send-icon lucide-send"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>
+                    Envoyer le message
+                </button>
+            </form>
+            <div id="contact-infos">
+                <div id="localisation">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin-icon lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <div>
+                        <p>localisation</p>
+                        <p>France</p>
+                    </div>
+                </div>
+                <div id="social-media">
+                    <p>Retrouvez-moi sur</p>
+                    <div>
+                        <a href="https://github.com/skyfun06">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github-icon lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin-icon lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text-icon lucide-file-text"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-xml-icon lucide-code-xml"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+            Portfolio
+        </p>
+        <p>
+            Fait avec 
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="red" color="red" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
+            pour Parcoursup 2026
+        </p>
+        <p>React <span>•</span> TypeScript <span>•</span> Tailwind</p>
+    </footer>
 </body>
 </html>
