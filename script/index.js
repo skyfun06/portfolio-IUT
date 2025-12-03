@@ -1,3 +1,13 @@
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY <= 80) {
+        header.classList.add("top");
+    } else {
+        header.classList.remove("top");
+    }
+});
+
 const phrases = [
     "Futur Étudiant BUT Informatique",
     "Passioné par le Developpement",
