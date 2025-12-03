@@ -1,5 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+:root {
+    --bg-header: #f6f4fbad;
+    --border-header: #f6f4fbad;
+    --toggle: #18181b;
+    --link: #637083;
+    --theme-switch: linear-gradient(90deg, rgba(223, 217, 246, 1) 0%, rgba(212, 236, 229, 1) 100%);
+    --brightness: brightness(0.9);
+    --accueil-bg: linear-gradient(135deg, #f3e7ff 0%, #ddeaff 50%, #d4f1e6 100%);
+    --tag: #f6f5fb;
+    --border-tag: #e9e8f3;
+    --description: #637083;
+}
+
+body.dark {
+    --bg-header: #202025d6;
+    --border-header: #303035;
+    --toggle: #f0f2f4;
+    --link: #99a4b2;
+    --theme-switch: linear-gradient(90deg,rgba(56, 51, 83, 1) 0%, rgba(38, 63, 60, 1) 100%);
+    --brightness: brightness(1.1);
+    --accueil-bg: linear-gradient(135deg, rgba(46, 35, 65, 1) 0%, #202025 50%, rgba(39, 71, 62, 1) 100%);
+    --tag: #202025d6;
+    --border-tag: #32303a;
+    --description: #99a4b2;
+}
+
 body {
     margin: 0;
     font-family: "Inter", sans-serif;
@@ -16,7 +42,7 @@ header {
 
     padding: 32px;
     
-    background-color: #f6f4fbad;
+    background-color: var(--bg-header);
 
     position: fixed;
     top: 0;
@@ -24,8 +50,12 @@ header {
     right: 0;
     z-index: 50;
 
+    border: 1px solid var(--border-header);
+
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(18px);
+
+    transition: all 0.3s ease;
 }
 
 #title-header {
@@ -35,6 +65,7 @@ header {
     align-items: center;
     gap: 8px;
     
+    color: var(--toggle);
     font-size: 24px;
     font-weight: 600;
 
@@ -56,7 +87,7 @@ header {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 24px;
+    gap: 32px;
 }
 
 .link {
@@ -80,14 +111,13 @@ header {
     left: 0;
     bottom: -3px;
 
-    background: #8A62E8;
     background: linear-gradient(90deg,rgba(138, 98, 232, 1) 0%, rgba(54, 174, 140, 1) 100%);
 
     transition: width 0.3s ease;
 }
 
 .link:hover {
-    color: #000;
+    color: var(--toggle);
 }
 
 .link:hover::after {
@@ -101,26 +131,22 @@ header {
     display: flex;
     align-items: center;
     
-    background: radial-gradient(
-        circle at 70% 20%,
-        rgba(255, 255, 255, 0.4),
-        rgba(220, 220, 255, 0.2),
-        rgba(180, 200, 255, 0.15),
-        rgba(150, 170, 255, 0.1)
-        ),
-        linear-gradient(
-        135deg,
-        #f3e7ff,
-        #ddeaff,
-        #d4f1e6
-        );
-    background-size: cover;
+    background: #DFD9F6;
+    background: var(--theme-switch);
     padding: 4px;
 
     border-radius: 9999px;
 
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
     position: relative;
+    
+    transition: all 0.3s ease;
     cursor: pointer;
+}
+
+.theme-switch:hover {
+    filter: var(--brightness);
 }
 
 .thumb {
@@ -157,23 +183,13 @@ header {
     justify-content: flex-start;
     align-items: flex-start;
     
-    background: radial-gradient(
-        circle at 70% 20%,
-        rgba(255, 255, 255, 0.4),
-        rgba(220, 220, 255, 0.2),
-        rgba(180, 200, 255, 0.15),
-        rgba(150, 170, 255, 0.1)
-        ),
-        linear-gradient(
-        135deg,
-        #f3e7ff,
-        #ddeaff,
-        #d4f1e6
-    );
+    background: var(--accueil-bg);
     background-size: cover;
 
     padding-top: 64px;
     padding: 100px 52px;
+
+    transition: all 0.3s ease;
 }
 
 #hero-accueil {
@@ -199,7 +215,9 @@ header {
     font-size: 14px;
     font-weight: 500;
 
-    background-color: #f6f5fb;
+    background-color: var(--tag);
+
+    border: 1px solid var(--border-tag);
 
     padding: 8px 16px;
 
@@ -233,7 +251,7 @@ header {
 #description {
     max-width: 672px;
 
-    color: #637083;
+    color: var(--description);
     font-size: 18px;
 }
 
@@ -246,10 +264,10 @@ header {
 }
 
 .buttons-accueil {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
 
-    padding: 12px 40px; 
+    padding: 14px 40px; 
 
     border-radius: 12px;
 
