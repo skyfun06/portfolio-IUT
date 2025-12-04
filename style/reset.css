@@ -12,3 +12,7 @@
 	box-sizing: border-box;
 	touch-action: manipulation;
 }
+
+button, a {
+	cursor: pointer;
+}

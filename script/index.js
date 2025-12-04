@@ -15,6 +15,36 @@ const phrases = [
     "Hello, I'm the Next Developer"
 ];
 
+const project = document.getElementById("bamboorush");
+const popup = document.getElementById("popup");
+const closeBtn = document.getElementById("closeBtn");
+
+project.addEventListener("click", () => {
+    popup.style.display = "flex";
+    setTimeout(() => popup.classList.add("active"), 10); // petite latence pour trigger l'anim
+    header.style.display = "none";
+});
+
+closeBtn.addEventListener("click", () => {
+    popup.classList.remove("active");
+    header.style.display = "flex";
+
+    setTimeout(() => {
+        if(!popup.classList.contains("active")) popup.style.display = "none";
+    }, 400); // durée synchro avec la transition CSS
+});
+
+popup.addEventListener("click", (e) => {
+    if(e.target === popup) {
+        popup.classList.remove("active");
+        header.style.display = "flex";
+
+        setTimeout(() => {
+            if(!popup.classList.contains("active")) popup.style.display = "none";
+        }, 400);
+    }
+});
+
 const element = document.getElementById("typewriter");
 
 const themeSwitch = document.getElementById("theme-switch");
@@ -79,3 +109,23 @@ themeSwitch.addEventListener("click", () => {
 
     
 });
+
+const sendEmail = document.getElementById("send-email")
+
+function sendMail(e) {
+    e.preventDefault();
+
+    let parms = {
+        name : document.getElementById("name").value,
+        email : document.getElementById("email").value,
+        message : document.getElementById("message").value
+    }
+
+    emailjs.send("service_omlj705", "template_n68ovfl", parms)
+    .then(() => {
+        console.log("Email just send !")
+    })
+    .catch((err) => console.log("Erreur : ", err))
+}
+
+sendEmail.addEventListener("click", sendMail);
