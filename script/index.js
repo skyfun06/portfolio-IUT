@@ -1,10 +1,27 @@
 const header = document.querySelector("header");
+const hamMenu = document.getElementById("ham-menu")
+const openHamMenu = document.getElementById("open-ham-menu")
+const closeHamMenu = document.getElementById("close-ham-menu")
+
+openHamMenu.addEventListener("click", () => {
+    hamMenu.style.display = "flex"
+    openHamMenu.style.display = "none"
+    closeHamMenu.style.display = "flex"
+});
+
+closeHamMenu.addEventListener("click", () => {
+    hamMenu.style.display = "none"
+    openHamMenu.style.display = "flex"
+    closeHamMenu.style.display = "none"
+});
 
 window.addEventListener("scroll", () => {
     if (window.scrollY <= 80) {
         header.classList.add("top");
+        hamMenu.classList.add("top")
     } else {
         header.classList.remove("top");
+        hamMenu.classList.remove("top")
     }
 });
 
